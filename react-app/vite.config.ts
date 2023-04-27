@@ -7,6 +7,9 @@ import federationConfig from "./federation.config.json";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), federation(federationConfig)],
+  server: {
+    port: 3000,
+  },
   build: {
     modulePreload: false,
     target: "esnext",
